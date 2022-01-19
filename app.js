@@ -7,6 +7,9 @@ import cors  from 'cors';
 import logger  from 'morgan';
 
 import usersRouter  from './routes/users.js';
+import journalRouter from "./routes/journals.js"
+// import moodRouter from "./routes/moods.js"
+import todoRouter from "./routes/todolist.js"
 
 const app = express();
 
@@ -17,7 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/users', usersRouter);
+app.use('/api/journals', journalRouter);
+app.use('/api/todos', todoRouter);
+app.use('/api/users', usersRouter);
 
 app.use(function (req, res, next) {
   res.status(404).json({message: "We couldn't find what you were looking for 😞"})
