@@ -1,5 +1,5 @@
 import { response } from "express";
-import query from "../db";
+import query from "../db/index.js";
 
 
 // todos (userid, date, ToDoItem, checked, positionToDo)

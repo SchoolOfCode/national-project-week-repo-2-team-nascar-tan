@@ -17,4 +17,4 @@ const pool = new pg.Pool({
     return pool.query(text, params)
   }
 
-  console.log({config})
+//   console.log({config})

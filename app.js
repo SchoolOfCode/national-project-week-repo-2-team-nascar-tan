@@ -20,9 +20,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/api/journals', journalRouter);
-app.use('/api/todos', todoRouter);
-app.use('/api/users', usersRouter);
+// app.get("/test",function(req,res,next){
+//   console.log("Working")
+//   next()
+// })
+
+app.use('/journals', journalRouter);
+app.use('/todos', todoRouter);
+app.use('/users', usersRouter);
 
 app.use(function (req, res, next) {
   res.status(404).json({message: "We couldn't find what you were looking for 😞"})
