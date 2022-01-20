@@ -1,5 +1,5 @@
 import express from "express";
-import { getUserByID, getAllUsers,addNewUser, updateUserById, deleteUserById } from "../models/users.js"
+import { getUserByID, getAllUsers,addNewUser, updateUserById, deleteUserById, getHomepageData } from "../models/users.js"
 
 
 
@@ -16,7 +16,12 @@ const router = express.Router();
 
 /* GET users listing. */
 
+router.get("/homepage/:id", async function (req, res, next) {
 
+  const response = await getHomepageData(req.params.id)
+  
+res.json( {payload:  response.rows });
+});
 
 
 

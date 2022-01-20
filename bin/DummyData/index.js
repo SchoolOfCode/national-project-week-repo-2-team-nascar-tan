@@ -1,6 +1,6 @@
-export const dummy_data = [
+// import {moods, users, toDo, journalArticles} from "/here"
   
-    {moods: [
+ export const moods= [
       {
         user_ID: 1,
         date: "151121",
@@ -26,42 +26,37 @@ export const dummy_data = [
         date: "071221",
         myMood: 6,
       },
-    ]},
+    ]
 
-    {users: [
+
+ export const users= [
       {
         userName: "Callum",
-        user_ID: 1,
         cohort: 11,
       },
       {
         userName: "Najma",
-        user_ID: 2,
         cohort: 10,
       },
       {
         userName: "Samira",
-        user_ID: 3,
         cohort: 9,
       },
       {
         userName: "Tan",
-        user_ID: 4,
         cohort: 8,
       },
       {
         userName: "Geneva",
-        user_ID: 5,
         cohort: 7,
       },
       {
         userName: "Tony",
-        user_ID: 6,
         cohort: 11,
       },
-    ]},
+    ]
 
-    const toDo: [
+  export  const toDo = [
       {
         user_ID: 1,
         toDoItem: "w3d4",
@@ -104,9 +99,9 @@ export const dummy_data = [
         checked: false,
         positionToDo: 1,
       },
-    ],
+    ]
 
-    journalArticle: [
+  export  const journalArticles = [
       {
         user_ID: 1,
         title: "I'm doing great!",
@@ -155,6 +150,6 @@ export const dummy_data = [
         body: "Today I did a really good job at being project manager.",
         date: "19012021",
       },
-    ],
+    ]
   
-];
+

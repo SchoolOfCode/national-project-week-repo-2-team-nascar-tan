@@ -20,7 +20,7 @@ export async function getAllJournals(){
 
 export async function addNewJournal(article, id, date){
 
-    return await query({text:"INSERT INTO journals (userid, date, title, body) VALUES ($1, $2, $3, $4)", values:[id, date, article.title, article.body]})
+    return await query({text:"INSERT INTO journals (id, date, title, body) VALUES ($1, $2, $3, $4)", values:[id, date, article.title, article.body]})
 
 }
 

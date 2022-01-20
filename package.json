@@ -9,11 +9,24 @@
     "makeUsersTable": "node -r dotenv/config ./db/scripts/makeUsersTable.js",
     "populateUsersTable": "node -r dotenv/config ./db/scripts/populateUsersTable.js",
     "getUsersTable": "node -r dotenv/config ./db/scripts/getUsersTable.js",
+    "deleteUsersData": "node -r dotenv/config ./db/scripts/deleteUsersData.js",
 
-    "makeToDosTable":"node -r dotenv/config ./db/scripts/Journal/ToDosTable.js",
+    "populateJournalsTable":"node -r dotenv/config ./db/scripts/populateJournalsTable.js",
 
+    "getJournalData":"node -r dotenv/config ./db/scripts/getJournalData.js",
 
-    "runMode": "node -r dotenv/config ./models/index.js"
+    "makeToDosTable":"node -r dotenv/config ./db/scripts/makeToDosTable.js",
+
+    
+
+    "populateToDosTable":"node -r dotenv/config ./db/scripts/populateToDosTable.js",
+
+    "getToDosData":"node -r dotenv/config ./db/scripts/getToDosData.js",
+
+    
+
+    "deleteToDosData":"node -r dotenv/config ./db/scripts/deleteToDosData.js"
+
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
