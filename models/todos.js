@@ -35,8 +35,8 @@ export async function updateToDoByIdAndDateAndPosition(id, date, position, body)
 
 
         switch(body.column){
-            case "TODOITEM":
-            return await query({text:"UPDATE todos SET item=$1 WHERE id=$1 AND date=$2 AND position=$3", values:[body.text,id,date, position ]})
+            case "ITEM":
+            return await query({text:"UPDATE todos SET item=$1 WHERE id=$2 AND date=$3 AND position=$4", values:[body.text,id,date, position ]})
             case "POSITION":
             return await query({text:"UPDATE todos SET position=$1 WHERE id=$2 AND date=$3 AND position=$4", values:[body.text,id,date, position ]})
             case "CHECKED":
