@@ -31,9 +31,9 @@ export async function updateJournalByIdAndDate(id, date, body){ /// Send a patch
 
 
         if (body.column==="TITLE"){
-            return await query({text:"UPDATE journals SET title=$2 WHERE id=$1 AND date=$2", values:[id,date,body.text, date, ]})
+            return await query({text:"UPDATE journals SET title=$1 WHERE id=$2 AND date=$3", values:[body.text,id,date ]})
         }else if(body.column==="BODY"){
-            return await query({text:"UPDATE journals SET body=$2 WHERE id=$1 AND date=$2", values:[id,date,body.text, date ]})
+            return await query({text:"UPDATE journals SET body=$1 WHERE id=$2 AND date=$3", values:[body.text,id,date ]})
         }else{
             return "Invalid column type in patch request, did you mean TITLE or BODY?"
         }
