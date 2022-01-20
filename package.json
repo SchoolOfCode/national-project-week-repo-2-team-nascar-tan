@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node -r dotenv/config ./bin/www.js",
+    "start": "node ./bin/www.js",
     "dev": "nodemon -r dotenv/config ./bin/www.js",
     "makeUsersTable": "node -r dotenv/config ./db/scripts/makeUsersTable.js",
     "populateUsersTable": "node -r dotenv/config ./db/scripts/populateUsersTable.js",
