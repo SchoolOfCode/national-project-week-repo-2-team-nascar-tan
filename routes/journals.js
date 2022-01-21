@@ -1,5 +1,5 @@
 import express from "express";
-import { getJournalByUserIDandDate, getAllJournals,addNewJournal, updateJournalByIdAndDate,deleteJournalByIdAndDate } from "../models/journals.js"
+import { replaceJournalByIdAndDate, getJournalByUserIDandDate, getAllJournals,addNewJournal, updateJournalByIdAndDate,deleteJournalByIdAndDate } from "../models/journals.js"
 
 
 
@@ -40,6 +40,12 @@ router.patch("/:id/:date",async function(req,res,next){
 
         const response = await updateJournalByIdAndDate(req.params.id, req.params.date, req.body)
         res.json( {payload: response.rows})
+})
+
+router.put("/:id/:date",async function(req,res,next){
+
+    const response = await replaceJournalByIdAndDate(req.params.id, req.params.date, req.body) //body of title and body 
+    res.json( {payload: response.rows})
 })
 
 router.delete("/:id/:date",async function(req,res,next){
