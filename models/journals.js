@@ -40,6 +40,17 @@ export async function updateJournalByIdAndDate(id, date, body){ /// Send a patch
     
 }
 
+
+export async function replaceJournalByIdAndDate(id, date, body){ ///Deletes current journal, reapps it
+
+    // (req.params.id, req.params.date, req.body.column, req.body)
+
+        await deleteJournalByIdAndDate(id, date)
+        return await addNewJournal({title:body.title,body:body.body},id,date)
+
+    
+}
+
 export async function deleteJournalByIdAndDate(id, date){
     const response = await query({text:"DELETE FROM journals WHERE id=$1 AND date=$2", values:[id, date]})
     return response
