@@ -1,15 +1,16 @@
 import pg from "pg"
-// import {connectionString} from "../config.js" 
+import {connectionString} from "../config.js" 
 
-import * as config from "../config.js"
+// import * as config from "../config.js"
 
 
 const pool = new pg.Pool({
-  user: config.databaseUserName,
-  host: config.host,
-  database: config.database,
-  password: config.password,
-  port: config.port,
+  // user: config.databaseUserName,
+  // host: config.host,
+  // database: config.database,
+  // password: config.password,
+  // port: config.port,
+  connectionString,
     ssl:{rejectUnauthorized:false} })
 
 
